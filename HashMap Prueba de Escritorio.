@@ -1,0 +1,37 @@
+HashMap Prueba de Escritorio.
+
+La implementacion de este hashmap usa un arreglo de listas conjunto con una funcion hash.
+al agregar un valor se calcula la posicion hash usando dicha funcion.
+
+EJEMPLOS:
+hashmap.insert("josue",100);
+hashmap.insert("nimer",40);
+hashmap.insert("zorra",600);
+hashmap.insert("arroz",200);
+
+ ========= INSERT ==========
+
+ 
+hashmap.insert("josue",100);
+
+--> hash("josue") = 450; //Genera una posicion basada en el string
+
+En el arreglo nos vamos a la posicion 450 y hacemos push_front del valor y sullave en una lista. 
+
+array[450].push_front(new Node("josue", 100));
+
+
+============= GET =============
+
+hashmap.get("josue");
+
+--> hash("josue") = 450;
+
+En el Arreglo nos vamos a la posicion que regresa el hash e iteramos en la lista que nos regresa el arreglo hasta encontrar la llave que nos mandaron.
+
+return  = array[450].find("josue"); // si la llave no es encontrada se retorna -1
+
+
+=========== EXIST =========
+
+Si el get retorna -1 significa que no existe en el arreglo
